@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane cacheShape="false" centerShape="false" depthTest="ENABLE" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.92" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Sistem 7 Cifara">
+               <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="-4.0" layoutY="-1.0" prefHeight="665.0" prefWidth="1006.0" AnchorPane.topAnchor="7.0">
+                           <children>
+                              <Pane fx:id="ebe" layoutX="5.0" layoutY="79.0" prefHeight="565.0" prefWidth="1000.0" stylesheets="@application.css">
+                                 <children>
+                                    <GridPane layoutX="58.0" layoutY="7.0" prefHeight="68.0" prefWidth="874.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label fx:id="slUlog" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="121.0" text="0.0 din" textFill="WHITE" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="pog" mnemonicParsing="false" onAction="#pogoDak" pickOnBounds="false" prefHeight="24.0" prefWidth="100.0" GridPane.columnIndex="3">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
+                                          <Button fx:id="prom" cache="true" mnemonicParsing="false" onAction="#promaSaj" pickOnBounds="false" prefHeight="24.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
+                                          <Label fx:id="mogDob" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="44.0" prefHeight="35.0" prefWidth="121.0" text="0.0 din" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="cistDob" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="44.0" prefHeight="35.0" prefWidth="121.0" text="0.0 din" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="pogNstanje" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="44.0" prefHeight="35.0" prefWidth="121.0" text="0.0 din" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="promNstanje" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="44.0" prefHeight="35.0" prefWidth="121.0" text="0.0 din" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </GridPane>
+                                    <Label fx:id="kvk" alignment="CENTER" contentDisplay="CENTER" layoutX="643.0" layoutY="113.0" prefHeight="34.0" prefWidth="71.0" textAlignment="CENTER" textFill="#88d5ff">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <Bloom />
+                                       </effect>
+                                    </Label>
+                                    <TabPane layoutX="511.0" layoutY="186.0" prefHeight="281.0" prefWidth="405.0" tabClosingPolicy="UNAVAILABLE">
+                                      <tabs>
+                                        <Tab text="Jan">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <LineChart maxWidth="410.0" prefHeight="254.0" prefWidth="410.0">
+                                                         <xAxis>
+                                                            <CategoryAxis side="BOTTOM" />
+                                                         </xAxis>
+                                                         <yAxis>
+                                                            <NumberAxis side="LEFT" />
+                                                         </yAxis>
+                                                      </LineChart>
+                                                   </children></AnchorPane>
+                                          </content>
+                                        </Tab>
+                                        <Tab text="Feb">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <LineChart maxWidth="410.0" prefHeight="254.0" prefWidth="410.0">
+                                                         <xAxis>
+                                                            <CategoryAxis side="BOTTOM" />
+                                                         </xAxis>
+                                                         <yAxis>
+                                                            <NumberAxis side="LEFT" />
+                                                         </yAxis>
+                                                      </LineChart>
+                                                   </children></AnchorPane>
+                                          </content>
+                                        </Tab>
+                                          <Tab text="Mar">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <LineChart maxWidth="410.0" prefHeight="254.0" prefWidth="410.0">
+                                                         <xAxis>
+                                                            <CategoryAxis side="BOTTOM" />
+                                                         </xAxis>
+                                                         <yAxis>
+                                                            <NumberAxis side="LEFT" />
+                                                         </yAxis>
+                                                      </LineChart>
+                                                   </children></AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Apr">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <LineChart maxWidth="410.0" prefHeight="254.0" prefWidth="410.0">
+                                                         <xAxis>
+                                                            <CategoryAxis side="BOTTOM" />
+                                                         </xAxis>
+                                                         <yAxis>
+                                                            <NumberAxis side="LEFT" />
+                                                         </yAxis>
+                                                      </LineChart>
+                                                   </children></AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Maj">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <LineChart maxWidth="410.0" prefHeight="254.0" prefWidth="410.0">
+                                                        <xAxis>
+                                                          <CategoryAxis side="BOTTOM" />
+                                                        </xAxis>
+                                                        <yAxis>
+                                                          <NumberAxis side="LEFT" />
+                                                        </yAxis>
+                                                      </LineChart>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Jun">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <LineChart maxWidth="410.0" prefHeight="254.0" prefWidth="410.0">
+                                                         <xAxis>
+                                                            <CategoryAxis side="BOTTOM" />
+                                                         </xAxis>
+                                                         <yAxis>
+                                                            <NumberAxis side="LEFT" />
+                                                         </yAxis>
+                                                      </LineChart>
+                                                   </children></AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Jul">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <LineChart maxWidth="410.0" prefHeight="254.0" prefWidth="410.0">
+                                                         <xAxis>
+                                                            <CategoryAxis side="BOTTOM" />
+                                                         </xAxis>
+                                                         <yAxis>
+                                                            <NumberAxis side="LEFT" />
+                                                         </yAxis>
+                                                      </LineChart>
+                                                   </children></AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Avg">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <LineChart maxWidth="410.0" prefHeight="254.0" prefWidth="410.0">
+                                                         <xAxis>
+                                                            <CategoryAxis side="BOTTOM" />
+                                                         </xAxis>
+                                                         <yAxis>
+                                                            <NumberAxis side="LEFT" />
+                                                         </yAxis>
+                                                      </LineChart>
+                                                   </children></AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Sep">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <LineChart maxWidth="410.0" prefHeight="254.0" prefWidth="410.0">
+                                                         <xAxis>
+                                                            <CategoryAxis side="BOTTOM" />
+                                                         </xAxis>
+                                                         <yAxis>
+                                                            <NumberAxis side="LEFT" />
+                                                         </yAxis>
+                                                      </LineChart>
+                                                   </children></AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Okt">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <LineChart maxWidth="410.0" prefHeight="254.0" prefWidth="410.0">
+                                                         <xAxis>
+                                                            <CategoryAxis side="BOTTOM" />
+                                                         </xAxis>
+                                                         <yAxis>
+                                                            <NumberAxis side="LEFT" />
+                                                         </yAxis>
+                                                      </LineChart>
+                                                   </children></AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Nov">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <LineChart maxWidth="410.0" prefHeight="254.0" prefWidth="410.0">
+                                                         <xAxis>
+                                                            <CategoryAxis side="BOTTOM" />
+                                                         </xAxis>
+                                                         <yAxis>
+                                                            <NumberAxis side="LEFT" />
+                                                         </yAxis>
+                                                      </LineChart>
+                                                   </children></AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Dec">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <LineChart maxWidth="410.0" prefHeight="254.0" prefWidth="410.0">
+                                                         <xAxis>
+                                                            <CategoryAxis side="BOTTOM" />
+                                                         </xAxis>
+                                                         <yAxis>
+                                                            <NumberAxis side="LEFT" />
+                                                         </yAxis>
+                                                      </LineChart>
+                                                   </children></AnchorPane>
+                                             </content>
+                                          </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                 </children>
+                              </Pane>
+                              <Button fx:id="klikni" layoutX="378.0" layoutY="14.0" mnemonicParsing="false" onAction="#izraCunaj" pickOnBounds="false" prefHeight="54.0" prefWidth="201.0" style="-: aa.png;" stylesheets="@application.css">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Text fill="#1d5479" layoutX="599.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unesi Kvotu:" textAlignment="RIGHT" wrappingWidth="82.6171875">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="kvota" layoutX="688.0" layoutY="29.0" prefHeight="25.0" prefWidth="50.0" />
+                              <Text fill="#1d5479" layoutX="153.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unesi Bankroll:" textAlignment="RIGHT" wrappingWidth="96.13671875">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="bankroll" layoutX="258.0" layoutY="28.0" prefHeight="25.0" prefWidth="100.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+          <Tab text="Arhiva Tiketa">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Kretanje Bankrolla">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Predlozi za klađenje">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Predlozi za klađenje uživo">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Kalkulator Sistema">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
