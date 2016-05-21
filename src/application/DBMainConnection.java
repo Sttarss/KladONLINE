@@ -1,6 +1,8 @@
 package application;
        // ovu sam menjao  
-// ovde sam ovo doktorirao                               
+// ovde sam ovo doktorirao
+// sad se vec seljacim
+
 //                                                            KONEKCIJA SA BAZOM    
 //                                                  ============LICNI PODATCI==============
 
