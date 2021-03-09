@@ -247,7 +247,7 @@ public class MainController {
 	    }
 	    catch (NumberFormatException nfe)
 	    {
-	      System.out.println("NumberFormatException: " + nfe.getMessage());
+	      System.out.println("NumberFormatException: is " + nfe.getMessage());
 	    }	
 
 	}
